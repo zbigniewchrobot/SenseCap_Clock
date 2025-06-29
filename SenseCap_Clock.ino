@@ -35,6 +35,7 @@
 #define PWM_RESOLUTION 100  // 0–100% duty
 // backlight and colors
 #define BACKLIGHT 2
+// below colors in rgb565 format
 #define COLOR_W 63496  // 45061
 #define COLOR_S 27469  // 21130
 
@@ -101,8 +102,8 @@ void IRAM_ATTR onTimerCallback(void* arg) {
 
 void setup(void) {
   Serial.begin(115200);
-  // Serial.setDebugOutput(true);
-  // while(!Serial);
+  //Serial.setDebugOutput(true);
+  while(!Serial);
   Serial.println("Zegar by ZCh Zybi");
 
 #ifdef GFX_EXTRA_PRE_INIT

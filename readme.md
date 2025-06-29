@@ -34,10 +34,11 @@ It displays the current time using a 480x480 RGB display with time synchronized 
   - `WiFi`  
   - `time.h`  
 - Additional source files:  
-  - `Indicator_Extender.h`  
-  - `Indicator_SWSPI.h`
-  - `localdata.h`  - MUST be created by you with WiFi SSID and password!!!      
-- Board used in Arduino 'ESP32S3 Dev Module'
+  - `Indicator_Extender.h` and `Indicator_Extender.cpp`  
+  - `Indicator_SWSPI.h` and `Indicator_SWSPI.cpp`
+  - `lv_conf.h.readymade` which must be copied to the arduino library folder
+  - `localdata.h`  - MUST be created by you with WiFi SSID and password!!!     
+- Board to be used in Arduino `ESP32S3 Dev Module`
 ---
 
 
@@ -51,4 +52,12 @@ It displays the current time using a 480x480 RGB display with time synchronized 
    ```C
       #define WIFI_SSID "your_ssid"
       #define WIFI_PASSWORD "your_password"
-3. Compile (Verify) and Upload
+3. Copy file lv_conf.h.readymade as lv_conf.h to Arduino library folder. See also comments in lv_conf.h.readymade file
+4. Compile (Verify) and Upload to the device
+
+
+## 👤 Autor
+
+**Zbigniew Chrobot**  
+📧 zbigniewchrobot@o2.pl  
+🔗 [github.com/zbigniewchrobot](https://github.com/zbigniewchrobot)
