@@ -31,12 +31,12 @@
 #define GFX_BL 45
 // PWM
 #define PWM_PIN GFX_BL
-#define PWM_FREQ_HZ 1000    // 500 Hz PWM
+#define PWM_FREQ_HZ 1000    // 1000 Hz PWM
 #define PWM_RESOLUTION 100  // 0–100% duty
 // backlight and colors
-#define BACKLIGHT 2
+#define BACKLIGHT 1
 // below colors in rgb565 format
-#define COLOR_W 63496  // 45061
+#define COLOR_W 63499  // 45061
 #define COLOR_S 27469  // 21130
 
 
@@ -182,7 +182,8 @@ void setup(void) {
   // NTP
   Serial.println("Łącze NTP ...");
   gfx->print("Łączę NTP...\n");
-  configTime(3600, 3600, "pool.ntp.org");  // GMT +1, DST +1 (Polska)
+  //configTime(3600, 3600, "pool.ntp.org");  // GMT +1, DST +1 (Polska)
+  configTzTime("CET-1CEST,M3.5.0,M10.5.0/3", "pool.ntp.org");
   delay(200);
   gfx->fillScreen(BLACK);
   gfx->flush();
@@ -204,7 +205,8 @@ void loop() {
 
     // update esp32 rtc via NTP once per hour
     if ((minute == 0) && (second == 0)) {
-      configTime(3600, 3600, "pool.ntp.org");  // GMT +1, DST +1 (Polska)
+      //configTime(3600, 3600, "pool.ntp.org");  // GMT +1, DST +1 (Polska)
+      configTzTime("CET-1CEST,M3.5.0,M10.5.0/3", "pool.ntp.org");
     }
 
     // update display

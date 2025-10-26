@@ -21,7 +21,11 @@ It displays the current time using a 480x480 RGB display with time synchronized 
 
 ### Hardware
 
-- SenseCAP Indicator ESP32 device with  4" RGB display (ST7701 controller) https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/
+- SenseCAP Indicator ESP32 device with  4" RGB display (ST7701 controller) https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/ 
+
+- Arduiono details https://wiki.seeedstudio.com/SenseCAP_Indicator_ESP32_Arduino/
+
+- How to start esp32 with arduino https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html 
     
 - Wi-Fi network access
 
