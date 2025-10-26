@@ -52,7 +52,7 @@ It displays the current time using a 480x480 RGB display with time synchronized 
    ```bash
    git clone https://github.com/zbigniewchrobot/SenseCap_Clock.git
    cd SenseCap_Clock
-2. Create localdata.h fie with data like below
+2. Create localdata.h file with below content
    ```C
       #define WIFI_SSID "your_ssid"
       #define WIFI_PASSWORD "your_password"
@@ -65,3 +65,4 @@ It displays the current time using a 480x480 RGB display with time synchronized 
 **Zbigniew Chrobot**  
 📧 zbigniewchrobot@o2.pl  
 🔗 [github.com/zbigniewchrobot](https://github.com/zbigniewchrobot)
+
